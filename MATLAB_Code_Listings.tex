@@ -1,0 +1,99 @@
+
+% ------------------------------------------------------------------------------
+% REFERENCES: 
+% (1)  LaTeX Source Code Listings:
+% en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+% (2)  MATLAB OpenSurf by Dirk-Jan Kroon:
+% mathworks.com/matlabcentral/fileexchange/28300-opensurf-including-image-warp
+% ------------------------------------------------------------------------------
+
+
+% ------------------------------------------------------------------------------
+% Copy the following before \begin{document} and edit however you like.
+% ------------------------------------------------------------------------------
+
+\lstset{ 
+  language = Matlab,                  % language of the code
+  basicstyle = \scriptsize,           % fontsize for the code
+  keywordstyle = \color{Blue},        % \bfseries\underbar,
+  commentstyle = \color{ForestGreen}, 
+  stringstyle = \ttfamily,
+  numbers = left,                     % placement of line-numbers
+  numberstyle = \scriptsize,          % fontsize of line-numbers
+  stepnumber = 1,                     % step between two line-numbers
+  numbersep = 5pt,                    % spacing between line-numbers and code
+  backgroundcolor = \color{White},    % background color
+  showspaces = false,                 % show spaces using underscores
+  showstringspaces = false,           % underline spaces within strings
+  showtabs = false,                   % show tabs in strings using underscores
+  frame = single,                     % adds a frame around the code
+  tabsize = 2,                        % sets default tabsize to 2 spaces
+  captionpos = t,                     % sets the caption-position to bottom
+  breaklines = true,                  % sets automatic line breaking
+  breakatwhitespace = false           % sets automatic breaks at whitespace
+
+% title = \lstname,                   % show filenames with \lstinputlisting
+                                      % also try caption instead of title
+% escapeinside = {\%*}{*)},           % add comments within code
+% morekeywords = {function,}          % add more keywords to the set
+}        
+  
+
+% ------------------------------------------------------------------------------
+% Create Source Code Listings within Document.
+% i.e. between \begin{document} and \end{document}
+% ------------------------------------------------------------------------------
+
+\begin{itemize}
+    \item \texttt{OpenSURF} -- This MATLAB function detects interest points in an image, and describes the points via \textit{SURF} descriptors. The inputs and outputs of the function are summarised in Listing \ref{list:opensurf}.
+    \item \texttt{PaintSURF} -- This MATLAB function displays the image with the interest points (found by \texttt{OpenSURF}) drawn as circles. Circles of different sizes, directional lines, and colours are respectively associated with different scales, orientations and whether the point is a local maxima or minima. The inputs and outputs of the function are summarised in Listing \ref{list:paintsurf}.\\
+\end{itemize}
+
+% ------------------------------------------------------------------------------
+
+\scriptsize
+\begin{lstlisting} 
+[caption={Inputs and Outputs of MATLAB function \texttt{OpenSURF}},label={list:opensurf}]
+
+function ipts = OpenSURF(I,Options)
+
+% Inputs:
+%   I       - The 2D input image color or greyscale
+%   Options - Optional; A struct with options (see below)
+%
+% Outputs:
+%   Ipts - A structure with the information about all detected Landmark points
+%        - Ipts.x , ipts.y  : landmark position
+%        - Ipts.scale       : scale of the detected landmark
+%        - Ipts.laplacian   : laplacian of the landmark neighbourhood
+%        - Ipts.orientation : orientation in radians
+%        - Ipts.descriptor  : descriptor for corresponding point matching
+%
+% Options:
+%   Options.verbose     - boolean; display useful information (default False)
+%   Options.upright     - boolean; determine non-rotation invariant results
+%   Options.extended    - boolean; add extra landmark information to descriptor
+%   Options.tresh       - Hessian response threshold (default 0.0002)
+%   Options.octaves     - number of octaves to analyse (default 5)
+%   Options.init_sample - initial sampling step in the image (default 2)
+\end{lstlisting}
+\normalsize
+
+% ------------------------------------------------------------------------------
+
+\scriptsize
+\begin{lstlisting} 
+[caption={Inputs and Outputs of MATLAB function \texttt{PaintSURF}},label={list:paintsurf}]
+
+function PaintSURF(I,Ipts)
+
+%  Inputs:
+%    I    - image (2D color or greyscale)
+%    Ipts - interest points
+%
+%  Outputs:
+%    image I displayed with the found interest points Ipts
+\end{lstlisting}
+\normalsize
+
+% ------------------------------------------------------------------------------
