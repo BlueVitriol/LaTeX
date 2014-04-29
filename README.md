@@ -3,7 +3,7 @@ LaTeX
 
 Technical writing using LaTeX.
 
-## List of Files
+### Contents
 * [MATLAB_Code_Listings.tex] (https://github.com/BlueVitriol/LaTeX/blob/master/README.md#matlab_code_listingstex)
 * [Table_Landscape.tex] (https://github.com/BlueVitriol/LaTeX/blob/master/README.md#table_landscapetex)
 
