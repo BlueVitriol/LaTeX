@@ -4,8 +4,8 @@ LaTeX
 Technical writing using LaTeX.
 
 ## List of Files
-* [MATLAB_Code_Listings.tex] (https://github.com/BlueVitriol/LaTeX/master/README.md#matlab_code_listingstex)
-* [Table_Landscape.tex] (https://github.com/BlueVitriol/LaTeX/master/README.md#table_landscapetex)
+* [MATLAB_Code_Listings.tex] (https://github.com/BlueVitriol/LaTeX/blob/master/README.md#matlab_code_listingstex)
+* [Table_Landscape.tex] (https://github.com/BlueVitriol/LaTeX/blob/master/README.md#table_landscapetex)
 
 ### [MATLAB_Code_Listings.tex] (../BlueVitriol/LaTeX/MATLAB_Code_Listings.tex)
 
